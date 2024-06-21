@@ -1,0 +1,33 @@
+.animal-form-container {
+    background-image: url('../images/form-bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .form-content {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .animal-form-container {
+      height: auto;
+      padding: 40px 20px;
+    }
+  
+    .form-content {
+      padding: 20px;
+    }
+  }
+  

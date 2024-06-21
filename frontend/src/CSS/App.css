@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.App {
+  text-align: center;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0; /* Arka plan rengini değiştirin */
+  color: #000; /* Metin rengini değiştirin */
+}
+.card-spacing {
+  padding: 8px; /* Tüm ekran boyutlarında kartların etrafında boşluk bırak */
+}
+
+@media (max-width: 768px) {
+  .card-spacing {
+    padding: 4px; /* Küçük ekranlarda daha küçük boşluk */
+    display: flex;
+    justify-content: center; /* Yatay ortalama */
+    align-items: center; /* Dikey ortalama */
+  }
+}
+
+@media (max-width: 1280px) {
+  .card-spacing {
+    /*margin-left: 46px; */ 
+  }
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: center; /* Yatayda ortalar */
+  align-items: center; /* Dikeyde ortalar */
+  margin-top: 16px;
+}
+
+.login-box {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(236, 231, 224);
+  box-shadow: 18px 14px 27px 7px #000000;
+}
+
+
+/*
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-item {
+  margin: 0 10px; 
+}
+*/
+
+.navi-font{
+  font-family: "Rowdies", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.rowdies-light {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  justify-content: center;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.col {
+  width: 100%;
+  padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .col {
+    padding: 0 5px;
+  }
+}
