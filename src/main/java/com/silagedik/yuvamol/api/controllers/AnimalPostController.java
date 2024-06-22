@@ -71,7 +71,7 @@ import org.springframework.http.ResponseEntity;
 	        return ResponseEntity.ok(animals);
 	    }
 	
-	    @GetMapping("/breed/{breed}")
+	   /* @GetMapping("/breed/{breed}")
 	    public ResponseEntity<List<Animal>> getAnimalsByBreed(@PathVariable String breed) {
 	        List<Animal> animals = animalPostService.getAnimalsByBreed(breed);
 	        return ResponseEntity.ok(animals);
@@ -87,7 +87,7 @@ import org.springframework.http.ResponseEntity;
 	    public ResponseEntity<List<Animal>> getAnimalsByAgeGreaterThan(@PathVariable int age) {
 	        List<Animal> animals = animalPostService.getAnimalsByAgeGreaterThan(age);
 	        return ResponseEntity.ok(animals);
-	    }
+	    }*/
 	
 	    @GetMapping("/gender/{gender}")
 	    public ResponseEntity<List<Animal>> getAnimalsByGender(@PathVariable String gender) {
@@ -95,11 +95,11 @@ import org.springframework.http.ResponseEntity;
 	        return ResponseEntity.ok(animals);
 	    }	
 	
-	    @GetMapping("/health-status/{healthStatus}")
+	  /*  @GetMapping("/health-status/{healthStatus}")
 	    public ResponseEntity<List<Animal>> getAnimalsByHealthStatus(@PathVariable String healthStatus) {
 	        List<Animal> animals = animalPostService.getAnimalsByHealthStatus(healthStatus);
 	        return ResponseEntity.ok(animals);
-	    }
+	    }*/
 	
 	    @GetMapping("/location/{location}")
 	    public ResponseEntity<List<Animal>> getAnimalsByLocation(@PathVariable String location) {

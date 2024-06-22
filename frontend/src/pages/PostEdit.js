@@ -36,8 +36,8 @@ export default function PostEdit() {
   }, [animalId]);
 
   const genderOptions = [
-    { key: 'female', text: 'Dişi', value: 'dişi' },
-    { key: 'male', text: 'Erkek', value: 'erkek' },
+    { key: 'female', text: 'Dişi', value: 'Dişi' },
+    { key: 'male', text: 'Erkek', value: 'Erkek' },
   ];
 
   useEffect(() => {

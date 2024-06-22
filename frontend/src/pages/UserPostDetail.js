@@ -82,7 +82,7 @@ async function handleDeleteClick(animalId, ownerId) {
         <Card.Body>
         <Card.Title>{animal.animalName}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">{animal.breed}</Card.Subtitle>
-          <Card.Subtitle className="mb-2 text-muted">{animal.age} yaşında</Card.Subtitle>
+          <Card.Subtitle className="mb-2 text-muted">{animal.gender} / {animal.age} yaşında</Card.Subtitle>
           <Card.Text><strong> Açıklama: </strong>{animal.description}</Card.Text>
           <Card.Text><strong>Sağlık Durumu: </strong> {animal.healthStatus}</Card.Text>
           <Card.Text><strong>Konum: </strong>{animal.location}</Card.Text>

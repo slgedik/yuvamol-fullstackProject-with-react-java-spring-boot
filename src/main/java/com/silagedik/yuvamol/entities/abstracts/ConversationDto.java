@@ -16,7 +16,7 @@ public class ConversationDto {
     private Timestamp sentAt;
     private Timestamp readAt;
 
-    // Gerekli yapıcı
+   
     public ConversationDto(int senderId, int receiverId, Timestamp sentAt, String content, Timestamp readAt) {
         this.senderId = senderId;
         this.receiverId = receiverId;

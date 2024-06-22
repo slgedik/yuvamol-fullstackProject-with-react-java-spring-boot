@@ -18,7 +18,7 @@ const AnimalList = ({ selectedCategory }) => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
-
+  const [selectedGender, setSelectedGender] = useState('');
   useEffect(() => {
     dispatch(fetchAnimals());
   }, [dispatch]);
@@ -32,6 +32,9 @@ const AnimalList = ({ selectedCategory }) => {
     )
     .filter(animal => 
       selectedCity ? animal.location === selectedCity : true
+    )
+    .filter(animal =>
+      selectedGender ? animal.gender === selectedGender : true
     );
 
   function handleDetailClick(animalId) {
@@ -139,6 +142,17 @@ const AnimalList = ({ selectedCategory }) => {
 <option value="Yozgat">Yozgat</option>
 <option value="Zonguldak">Zonguldak</option>
 
+        </Form.Select>
+        <Form.Select
+          className='h-12 ml-4'
+          style={{ width: '200px' }}
+          value={selectedGender}
+          onChange={(e) => setSelectedGender(e.target.value)}
+          
+        >
+          <option value="">Cinsiyet Seç...</option>
+          <option value="Erkek">Erkek</option>
+          <option value="Dişi">Dişi</option>
         </Form.Select>
       </div>
       <Row>
