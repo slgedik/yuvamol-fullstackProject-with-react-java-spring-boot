@@ -13,11 +13,7 @@ public interface AnimalPostService {
     void deleteAnimal(int id);
     Animal updateAnimal(int id, AnimalDto animalDto);
     List<Animal> getAnimalsBySpecies(int speciesId);
-   /* List<Animal> getAnimalsByBreed(String breed);
-    List<Animal> getAnimalsByAgeLessThan(int age);
-    List<Animal> getAnimalsByAgeGreaterThan(int age);*/
     List<Animal> getAnimalsByGender(String gender);
-   // List<Animal> getAnimalsByHealthStatus(String healthStatus);
     List<Animal> getAnimalsByLocation(String location);
     List<Animal> getAnimalsByOwnerId(int ownerId);
     

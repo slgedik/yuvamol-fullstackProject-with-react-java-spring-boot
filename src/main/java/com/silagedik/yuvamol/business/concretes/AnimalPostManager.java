@@ -68,25 +68,9 @@ public class AnimalPostManager implements AnimalPostService  {
 	        return animalPostDao.findBySpecies_SpeciesId(speciesId);
 	    }
 
-	/*    public List<Animal> getAnimalsByBreed(String breed) {
-	        return animalPostDao.findByBreed(breed);
-	    }
-
-	    public List<Animal> getAnimalsByAgeLessThan(int age) {
-	        return animalPostDao.findByAgeLessThan(age);
-	    }
-
-	    public List<Animal> getAnimalsByAgeGreaterThan(int age) {
-	        return animalPostDao.findByAgeGreaterThan(age);
-	    }
-*/
 	    public List<Animal> getAnimalsByGender(String gender) {
 	        return animalPostDao.findByGender(gender);
 	    }
-
-	 /*   public List<Animal> getAnimalsByHealthStatus(String healthStatus) {
-	        return animalPostDao.findByHealthStatus(healthStatus);
-	    }*/
 
 	    public List<Animal> getAnimalsByLocation(String location) {
 	        return animalPostDao.findByLocation(location);
