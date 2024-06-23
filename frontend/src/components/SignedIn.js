@@ -47,9 +47,9 @@ export default function SignedIn({ setIsAuthenticated }) {
   };
 
   return (
-    <div className='border rounded-md px-2 py-2 w-36 bg-slate-200'>
+    <div className='border rounded-md px-2 py-2 w-36 bg-slate-200 flex justify-center items-center'>
       <Menu.Item>
-        {userInfo.profilePhoto ?  <Image avatar spaced="right" src={`data:image/jpeg;base64,${userInfo.profilePhoto}`} /> : <Image avatar spaced="right" src= {profilImg} /> }
+        {userInfo.profilePhoto ?  <Image avatar spaced="right" src={`data:image/jpeg;base64,${userInfo.profilePhoto}`} /> : <Image avatar spaced="right"  src= {profilImg} /> }
         
         <Dropdown pointing="top right text-bold" text={userInfo.username}>
           <DropdownMenu style={{ marginTop: '16px' }}>

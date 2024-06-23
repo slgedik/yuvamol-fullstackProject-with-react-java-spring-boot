@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import { Dropdown, DropdownMenu, DropdownItem} from 'semantic-ui-react';
+import profilImg from "../images/profil.png";
 export default function MessagesButton() {
   const [messages, setMessages] = useState([]);
   const [unreadCount, setUnreadCount] = useState(0);
@@ -61,12 +62,13 @@ export default function MessagesButton() {
                   <div className="feed">
                     <div className="feed-event">
                       <div className="feed-label flex items-center">
-                        <img src={`data:image/jpeg;base64,${message.senderProfilePhoto}`} alt="Sender" className="rounded-circle" width="40" height="40" />
+                      {message.senderProfilePhoto ? <img src={`data:image/jpeg;base64,${message.senderProfilePhoto}`} alt="Sender" className="rounded-circle" width="40" height="40" /> : <img src={profilImg} alt="Sender" className="rounded-circle" width="40" height="40" />}
                         <strong className='ml-4'>{message.senderUsername}:</strong> 
                       </div>
                       <div className="feed-content">
                         <div className="feed-summary">
-                          {message.content}
+                        {message.content.length > 40 ? `${message.content.substring(0, 40)}...` : message.content}
+                       
                         </div>
                       </div>
                     </div>

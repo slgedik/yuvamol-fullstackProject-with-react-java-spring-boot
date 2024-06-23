@@ -31,7 +31,7 @@ import org.springframework.http.ResponseEntity;
 	            e.printStackTrace();
 	            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
 	        }
-	    }
+	    } 
 	
 	    @GetMapping("/all")
 	    public ResponseEntity<List<Animal>> getAllAnimals() {
