@@ -173,127 +173,149 @@ const AnimalForm = () => {
   const handleFileChange = (event) => {
     setSelectedFiles(Array.from(event.target.files));
   };
-
   return (
     <div className='animal-form-container'>
+      
       <div className='form-content'>
+      <h2 className='font-bold pb-4 '>İlan Ekle</h2>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <FormField>
-            <label>İsim</label>
-            <Controller
-              name="animalName"
-              control={control}
-              render={({ field }) => <Input {...field} placeholder="İsim" />}
-            />
-            {errors.animalName && <span>Bu alan zorunludur</span>}
-          </FormField>
+          <div className="flex-container">
+            <label className="flex-label">İsim</label>
+            <FormField className="flex-input">
+              <Controller
+                name="animalName"
+                control={control}
+                render={({ field }) => <Input {...field} placeholder="İsim" />}
+              />
+              {errors.animalName && <span>Bu alan zorunludur</span>}
+            </FormField>
+          </div>
 
-          <FormField>
-            <label>Türü</label>
-            <Controller
-              name="speciesId"
-              control={control}
-              render={({ field }) => (
-                <Dropdown
-                  fluid
-                  selection
-                  options={speciesOptions}
-                  {...field}
-                  onChange={(e, { value }) => field.onChange(value)}
-                  placeholder="Tür seçiniz"
-                />
-              )}
-            />
-            {errors.speciesId && <span>Bu alan zorunludur</span>}
-          </FormField>
+          <div className="flex-container">
+            <label className="flex-label">Türü</label>
+            <FormField className="flex-input">
+              <Controller
+                name="speciesId"
+                control={control}
+                render={({ field }) => (
+                  <Dropdown
+                    fluid
+                    selection
+                    options={speciesOptions}
+                    {...field}
+                    onChange={(e, { value }) => field.onChange(value)}
+                    placeholder="Tür seçiniz"
+                  />
+                )}
+              />
+              {errors.speciesId && <span>Bu alan zorunludur</span>}
+            </FormField>
+          </div>
 
-          <FormField>
-            <label>Cins</label>
-            <Controller
-              name="breed"
-              control={control}
-              render={({ field }) => <Input {...field} placeholder="Cins" />}
-            />
-            {errors.breed && <span>This field is required</span>}
-          </FormField>
+          <div className="flex-container">
+            <label className="flex-label">Cins</label>
+            <FormField className="flex-input">
+              <Controller
+                name="breed"
+                control={control}
+                render={({ field }) => <Input {...field} placeholder="Cins" />}
+              />
+              {errors.breed && <span>This field is required</span>}
+            </FormField>
+          </div>
 
-          <FormField>
-            <label>Yaş</label>
-            <Controller
-              name="age"
-              control={control}
-              render={({ field }) => <Input type="number" {...field} placeholder="" />}
-            />
-            {errors.age && <span>Bu alan zorunludur</span>}
-          </FormField>
+          <div className="flex-container">
+            <label className="flex-label">Yaş</label>
+            <FormField className="flex-input">
+              <Controller
+                name="age"
+                control={control}
+                render={({ field }) => <Input type="number" {...field} placeholder="" />}
+              />
+              {errors.age && <span>Bu alan zorunludur</span>}
+            </FormField>
+          </div>
 
-          <FormField>
-            <label>Cinsiyet</label>
-            <Controller
-              name="gender"
-              control={control}
-              render={({ field }) => (
-                <Dropdown
-                  fluid
-                  selection
-                  options={genderOptions}
-                  {...field}
-                  onChange={(e, { value }) => field.onChange(value)}
-                  placeholder="Cinsiyet seçiniz"
-                />
-              )}
-            />
-            {errors.gender && <span>This field is required</span>}
-          </FormField>
+          <div className="flex-container">
+            <label className="flex-label">Cinsiyet</label>
+            <FormField className="flex-input">
+              <Controller
+                name="gender"
+                control={control}
+                render={({ field }) => (
+                  <Dropdown
+                    fluid
+                    selection
+                    options={genderOptions}
+                    {...field}
+                    onChange={(e, { value }) => field.onChange(value)}
+                    placeholder="Cinsiyet seçiniz"
+                  />
+                )}
+              />
+              {errors.gender && <span>This field is required</span>}
+            </FormField>
+          </div>
 
-          <FormField>
-            <label>Sağlık durumu</label>
-            <Controller
-              name="healthStatus"
-              control={control}
-              render={({ field }) => <Input {...field} placeholder="Sağlık durumu" />}
-            />
-            {errors.healthStatus && <span>Bu alan zorunludur</span>}
-          </FormField>
+          <div className="flex-container">
+            <label className="flex-label">Sağlık durumu</label>
+            <FormField className="flex-input">
+              <Controller
+                name="healthStatus"
+                control={control}
+                render={({ field }) => <Input {...field} placeholder="Sağlık durumu" />}
+              />
+              {errors.healthStatus && <span>Bu alan zorunludur</span>}
+            </FormField>
+          </div>
 
-          <FormField>
-            <label>Açıklama</label>
-            <Controller
-              name="description"
-              control={control}
-              render={({ field }) => <TextArea {...field} placeholder="Açıklama" />}
-            />
-            {errors.description && <span>Bu alan zorunludur</span>}
-          </FormField>
+          <div className="flex-container">
+            <label className="flex-label">Açıklama</label>
+            <FormField className="flex-input">
+              <Controller
+                name="description"
+                control={control}
+                render={({ field }) => <TextArea {...field} placeholder="Açıklama" />}
+              />
+              {errors.description && <span>Bu alan zorunludur</span>}
+            </FormField>
+          </div>
 
-          <FormField>
-            <label>Konum</label>
-            <Controller
-              name="location"
-              control={control}
-              render={({ field }) => (
-                <Dropdown
-                  fluid
-                  search
-                  selection
-                  options={provinces}
-                  allowAdditions
-                  {...field}
-                  onChange={(e, { value }) => field.onChange(value)}
-                  placeholder="Konum seçiniz"
-                />
-              )}
-            />
-            {errors.location && <span>Bu alan zorunludur</span>}
-          </FormField>
+          <div className="flex-container">
+            <label className="flex-label">Konum</label>
+            <FormField className="flex-input">
+              <Controller
+                name="location"
+                control={control}
+                render={({ field }) => (
+                  <Dropdown
+                    fluid
+                    search
+                    selection
+                    options={provinces}
+                    {...field}
+                    onChange={(e, { value }) => field.onChange(value)}
+                    placeholder="Konum seçiniz"
+                  />
+                )}
+              />
+              {errors.location && <span>Bu alan zorunludur</span>}
+            </FormField>
+          </div>
 
-          <FormField>
-            <label>Fotoğraf</label>
-            <input type="file" multiple onChange={handleFileChange} />
-          </FormField>
-          {success? ( <Button onClick = {()=> {navigate(`/posts/${userId}`)}} className='mb-4'>Geri dön</Button>) : ( <Button type='submit' className='mb-4'>Ekle</Button>)}
-         
-          <ToastContainer/>
+          <div className="flex-container">
+            <label className="flex-label">Fotoğraf</label>
+            <FormField className="flex-input">
+              <input type="file" multiple onChange={handleFileChange} />
+            </FormField>
+          </div>
+
+          {success ? (
+            <Button onClick={() => { navigate(`/posts/${userId}`) }} className='mb-4'>Geri dön</Button>
+          ) : (
+            <Button type='submit' className='mb-4'>Ekle</Button>
+          )}
+          <ToastContainer />
         </Form>
       </div>
     </div>
