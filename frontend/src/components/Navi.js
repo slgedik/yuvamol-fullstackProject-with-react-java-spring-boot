@@ -11,7 +11,7 @@ export default function Navi({ isAuthenticated, setIsAuthenticated }) {
   
   function handleHome() {
     if (isAuthenticated) {
-      navigate(`/home/${userId}`);
+      window.location.href = `/home/${userId}`;
     } else {
       navigate("/");
     }

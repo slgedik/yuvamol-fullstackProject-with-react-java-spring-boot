@@ -53,7 +53,7 @@ export default function MessagesButton() {
   return (
     <div className='mx-2 my-2'>
      
-        <Dropdown pointing="top right rounded-md px-2 py-2 w-32 text-bold bg-primary text-white mr-2 " text= {`Mesajlar (${unreadCount}) `}>
+        <Dropdown pointing="top right rounded-md px-2 py-2 w-32 text-bold bg-primary text-white mr-2 " text= {unreadCount>0? `Mesajlar (${unreadCount}) ` : `Mesajlar` }>
           <DropdownMenu style={{ marginTop: '16px' }}>
           {messages.map((message, index) => (
             <DropdownItem key={index} as={NavLink} to={`/messages`} onClick={() => handleReadMessage(message.id)}>
