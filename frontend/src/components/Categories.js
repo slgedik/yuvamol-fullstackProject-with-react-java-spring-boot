@@ -34,7 +34,7 @@ export default function Categories({ setSelectedCategory }) {
       {isMobile ? (
       
           <Dropdown>
-            <DropdownButton id="dropdown-basic-button" title="Kategoriler" className='mb-4 mt-16'>
+            <DropdownButton id="dropdown-basic-button" title="Kategoriler" className='mb-4 mt-4'>
               <Dropdown.Item onClick={() => setSelectedCategory(null)}>Hepsi</Dropdown.Item>
               {species.map((item) => (
                 <Dropdown.Item key={item.speciesId} onClick={() => setSelectedCategory(item.speciesId)}>

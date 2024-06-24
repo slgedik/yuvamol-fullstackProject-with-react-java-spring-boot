@@ -36,7 +36,7 @@ export default function Navi({ isAuthenticated, setIsAuthenticated }) {
           {isAuthenticated ? 
               (<div className='flex mr-8' >
               <Button onClick={handlePosts} className='mx-2 my-2'>İlanlarınız</Button>
-              <MessagesButton />
+              <MessagesButton/>
               <SignedIn setIsAuthenticated={setIsAuthenticated} />
               </div>)
 

@@ -45,17 +45,17 @@ const AnimalList = ({ selectedCategory }) => {
   return (
     <Container className='h-full flex-col justify-center items-center'>
       <h1 className='italic font-bold'>Yuva Arıyorum..</h1>
-      <div className='w-full flex justify-center items-center mt-8'>
+      <div className='w-full flex flex-wrap justify-center items-center mt-8'>
         <Form.Control
           type="text"
           placeholder="Hayvan ismi ara..."
-          className='h-12'
+          className='h-12 mb-2 sm:mb-0 sm:mr-4'
           style={{ width: '250px' }}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <Form.Select
-          className='h-12 ml-4'
+          className='h-12 mb-2 sm:mb-0 sm:mr-4'
           style={{ width: '200px' }}
           value={selectedCity}
           onChange={(e) => setSelectedCity(e.target.value)}
@@ -142,10 +142,9 @@ const AnimalList = ({ selectedCategory }) => {
           <option value="Yalova">Yalova</option>
           <option value="Yozgat">Yozgat</option>
           <option value="Zonguldak">Zonguldak</option>
-       
         </Form.Select>
         <Form.Select
-          className='h-12 ml-4'
+          className='h-12'
           style={{ width: '200px' }}
           value={selectedGender}
           onChange={(e) => setSelectedGender(e.target.value)}
@@ -157,7 +156,7 @@ const AnimalList = ({ selectedCategory }) => {
       </div>
       <Row>
         {currentAnimals.map((animal) => (
-          <Col key={animal.animalId} lg={4} md={6} sm={12} className="mt-3 flex items-center justify-center ">
+          <Col key={animal.animalId} lg={4} md={6} sm={12} className="mt-3 flex items-center justify-center">
             <Card className="ml-4 shadow-[20px_21px_15px_-3px_rgba(0,0,0,0.1)] mb-4" style={{ width: '100%', height: '430px', overflow: 'hidden' }}>
               {animal.photos && animal.photos.length > 0 ? (
                 <Card.Img
