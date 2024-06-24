@@ -25,8 +25,8 @@ export default function Navi({ isAuthenticated, setIsAuthenticated }) {
 
   return (
     <Navbar className='bg-sky-900' variant='light' expand="lg" fixed="top">
-      <Navbar.Brand className=' cursor-pointer px-12  ' onClick={handleHome}><h1 className='font-sans text-5xl text-bold italic text-white'>Yuvam Ol</h1></Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Brand className=' cursor-pointer pl-12  ' onClick={handleHome}><h1 className='font-sans text-5xl text-bold italic text-white'>Yuvam Ol</h1></Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className='mr-4'/>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
          
